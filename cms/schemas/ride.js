@@ -1,7 +1,10 @@
+import { FaRoute } from "react-icons/fa";
+
 export default {
 	name: "ride",
 	type: "document",
 	title: "Rides",
+	icon: FaRoute,
 	fields: [
 		{
 			name: "name",
@@ -29,4 +32,17 @@ export default {
 			title: "Directions",
 		},
 	],
+	preview: {
+		select: {
+			title: "name",
+			subtitle: "length",
+		},
+		prepare(selection) {
+			const { title, subtitle } = selection;
+			return {
+				title: title,
+				subtitle: subtitle + "km",
+			};
+		},
+	},
 };
