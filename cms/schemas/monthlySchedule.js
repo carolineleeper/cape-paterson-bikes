@@ -8,7 +8,7 @@ export default {
 			name: "month",
 			type: "date",
 			options: {
-				dateFormat: "MM-YYYY",
+				dateFormat: "MMM YYYY",
 				calendarTodayLabel: "Today",
 			},
 		},
