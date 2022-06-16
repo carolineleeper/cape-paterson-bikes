@@ -9,9 +9,19 @@ export default {
 			title: "Name",
 		},
 		{
-			name: "duration",
+			name: "length",
 			type: "number",
-			title: "Duration (kms)",
+			title: "Length (kms)",
+		},
+		{
+			name: "bikeType",
+			type: "string",
+			title: "Bike Type",
+		},
+		{
+			name: "directions",
+			type: "string",
+			title: "Directions",
 		},
 	],
 };
