@@ -12,5 +12,32 @@ export default {
 				calendarTodayLabel: "Today",
 			},
 		},
+		{
+			title: "Rides",
+			name: "rides",
+			type: "array",
+			of: [
+				{
+					title: "Ride",
+					name: "ride",
+					type: "object",
+					fields: [
+						{
+							name: "dateTime",
+							type: "datetime",
+							title: "Date/Time",
+							options: {
+								dateFormat: "DD MMM YYYY",
+								timeFormat: "HH:mm",
+								timeStep: 15,
+								calendarTodayLabel: "Today",
+							},
+						},
+						{ name: "rideId", type: "number", title: "Ride number (ID)" },
+						{ name: "details", type: "string", title: "Details" },
+					],
+				},
+			],
+		},
 	],
 };
