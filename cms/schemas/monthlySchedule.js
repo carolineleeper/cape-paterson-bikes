@@ -36,8 +36,18 @@ export default {
 						{ name: "rideId", type: "number", title: "Ride number (ID)" },
 						{ name: "details", type: "string", title: "Details" },
 					],
+					preview: {
+						select: {
+							title: "dateTime",
+						},
+					},
 				},
 			],
 		},
 	],
+	preview: {
+		select: {
+			title: "title",
+		},
+	},
 };
