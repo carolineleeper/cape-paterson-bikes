@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { createClient } from "next-sanity";
 
-const Home = () => {
+const Home = ({ rides }) => {
 	return (
 		<>
 			<Head>
@@ -8,9 +9,30 @@ const Home = () => {
 				<meta name="description" content="Bike riding group in Cape Paterson" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<p>Hello, world!</p>
+			<ul>
+				{rides.map((ride) => (
+					<li key={ride._id}>{ride.name}</li>
+				))}
+			</ul>
 		</>
 	);
 };
+
+const client = createClient({
+	projectId: "xbdplrfb",
+	dataset: "production",
+	apiVersion: "2022-06-16",
+	useCdn: false,
+});
+
+export async function getStaticProps() {
+	const rides = await client.fetch(`*[_type == "ride"]`);
+
+	return {
+		props: {
+			rides,
+		},
+	};
+}
 
 export default Home;
