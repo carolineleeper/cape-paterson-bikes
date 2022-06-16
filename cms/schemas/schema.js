@@ -5,7 +5,5 @@ import ride from "./ride"; // import the file you just made
 
 export default createSchema({
 	name: "default",
-	types: schemaTypes.concat([
-		ride, // add the document type to this array
-	]),
+	types: schemaTypes.concat([ride, monthlySchedule]),
 });
