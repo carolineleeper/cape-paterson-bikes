@@ -8,5 +8,10 @@ export default {
 			type: "string",
 			title: "Name",
 		},
+		{
+			name: "duration",
+			type: "number",
+			title: "Duration (kms)",
+		},
 	],
 };
