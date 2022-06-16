@@ -1,12 +1,17 @@
 export default {
 	name: "ride",
 	type: "document",
-	title: "Ride",
+	title: "Rides",
 	fields: [
 		{
 			name: "name",
 			type: "string",
 			title: "Name",
+		},
+		{
+			name: "rideId",
+			type: "string",
+			title: "Ride Number (ID)",
 		},
 		{
 			name: "length",
