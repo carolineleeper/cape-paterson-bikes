@@ -4,11 +4,14 @@ const Rides = ({ rides }) => {
 	return (
 		<>
 			<h1>Rides</h1>
-			<ul>
-				{rides.map((ride) => (
-					<li key={ride._id}>{ride.name}</li>
-				))}
-			</ul>
+			{rides.map((ride) => (
+				<div key={ride._id}>
+					<h2>{ride.name}</h2>
+					<p>{ride.length}km</p>
+					<p>{ride.bikeType}</p>
+					<p>{ride.directions}</p>
+				</div>
+			))}
 		</>
 	);
 };
