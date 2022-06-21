@@ -12,23 +12,60 @@ const formatDate = (value) => {
 	return date.toDateString().slice(0, -5);
 };
 
+const filterMonthlySchedule = (schedule) => {
+	const currentMonth = schedule.find((month) => {
+		const currentDate = new Date();
+		const scheduleMonth = new Date(month.month);
+
+		return scheduleMonth.getMonth() === currentDate.getMonth();
+	});
+
+	const lastMonth = schedule.find((month) => {
+		const currentDate = new Date();
+		const scheduleMonth = new Date(month.month);
+
+		return scheduleMonth.getMonth() === currentDate.getMonth() - 1;
+	});
+
+	const nextMonth = schedule.find((month) => {
+		const currentDate = new Date();
+		const scheduleMonth = new Date(month.month);
+
+		return scheduleMonth.getMonth() === currentDate.getMonth() + 1;
+	});
+
+	return { currentMonth, lastMonth, nextMonth };
+};
+
 const Calendar = ({ monthlySchedule }) => {
+	const { lastMonth, currentMonth, nextMonth } = filterMonthlySchedule(monthlySchedule);
+
 	return (
 		<>
 			<h1>Calendar</h1>
-			{monthlySchedule.map((schedule) => (
-				<div key={schedule._id}>
+			<div>
+				<h2>{lastMonth ? formatMonth(lastMonth.month) : null}</h2>
+			</div>
+			<div>
+				<h2>{currentMonth ? formatMonth(currentMonth.month) : null}</h2>
+
+				{/* {currentMonth.map((schedule) => (
+					<div key={schedule._id}>
 					<h2>{formatMonth(schedule.month)}</h2>
 					<h3>Rides</h3>
 					{schedule.rides.map((ride) => (
 						<>
-							<p>{formatDate(ride.dateTime)}</p>
-							<p>{ride.rideName}</p>
-							<p>{ride.details}</p>
+						<p>{formatDate(ride.dateTime)}</p>
+						<p>{ride.rideName}</p>
+						<p>{ride.details}</p>
 						</>
-					))}
-				</div>
-			))}
+						))}
+						</div>
+					))} */}
+			</div>
+			<div>
+				<h2>{nextMonth ? formatMonth(nextMonth.month) : null}</h2>
+			</div>
 		</>
 	);
 };
