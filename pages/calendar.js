@@ -43,28 +43,44 @@ const Calendar = ({ monthlySchedule }) => {
 	return (
 		<>
 			<h1>Calendar</h1>
-			<div>
-				<h2>{lastMonth ? formatMonth(lastMonth.month) : null}</h2>
-			</div>
-			<div>
-				<h2>{currentMonth ? formatMonth(currentMonth.month) : null}</h2>
-
-				{/* {currentMonth.map((schedule) => (
-					<div key={schedule._id}>
-					<h2>{formatMonth(schedule.month)}</h2>
-					<h3>Rides</h3>
-					{schedule.rides.map((ride) => (
-						<>
+			<div
+				key={lastMonth ? lastMonth._id : null}
+				// className={lastMonth ? monthlyScheduleContainer : monthlyScheduleContainerHidden}
+			>
+				<h2>{formatMonth(lastMonth.month)}</h2>
+				{lastMonth.rides.map((ride) => (
+					<>
 						<p>{formatDate(ride.dateTime)}</p>
 						<p>{ride.rideName}</p>
 						<p>{ride.details}</p>
-						</>
-						))}
-						</div>
-					))} */}
+					</>
+				))}
 			</div>
-			<div>
-				<h2>{nextMonth ? formatMonth(nextMonth.month) : null}</h2>
+			<div
+				key={currentMonth ? currentMonth._id : null}
+				// className={currentMonth ? monthlyScheduleContainer : monthlyScheduleContainerHidden}
+			>
+				<h2>{formatMonth(currentMonth.month)}</h2>
+				{currentMonth.rides.map((ride) => (
+					<>
+						<p>{formatDate(ride.dateTime)}</p>
+						<p>{ride.rideName}</p>
+						<p>{ride.details}</p>
+					</>
+				))}
+			</div>
+			<div
+				key={nextMonth ? nextMonth._id : null}
+				// className={nextMonth ? monthlyScheduleContainer : monthlyScheduleContainerHidden}
+			>
+				<h2>{formatMonth(nextMonth.month)}</h2>
+				{nextMonth.rides.map((ride) => (
+					<>
+						<p>{formatDate(ride.dateTime)}</p>
+						<p>{ride.rideName}</p>
+						<p>{ride.details}</p>
+					</>
+				))}
 			</div>
 		</>
 	);
