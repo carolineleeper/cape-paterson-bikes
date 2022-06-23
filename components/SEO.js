@@ -7,9 +7,9 @@ const SEO = (props) => {
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<meta name="robots" content="all" />
 			<link rel="icon" href="../favicon.ico" />
-			<title>Cape Paterson BUG &#128690; | {props.title}</title>
+			<title>Cape Paterson BUG | {props.title}</title>
 
-			<meta name="title" content={`Cape Paterson BUG 🚲 | ${props.title}`} />
+			<meta name="title" content={`Cape Paterson BUG | ${props.title}`} />
 			<meta
 				name="description"
 				content="Bike user group based in Cape Paterson, Victoria, Australia"
@@ -18,7 +18,7 @@ const SEO = (props) => {
 			{/* <!-- Open Graph / Facebook --> */}
 			<meta property="og:type" content="website" key="ogtype" />
 			{/* <meta property="og:url" content="https://tecomatwilight.com/" key="ogurl" /> */}
-			<meta property="og:title" content={`Cape Paterson BUG 🚲 | ${props.title}`} key="ogtitle" />
+			<meta property="og:title" content={`Cape Paterson BUG | ${props.title}`} key="ogtitle" />
 			<meta
 				property="og:description"
 				content="Bike user group based in Cape Paterson, Victoria, Australia"
@@ -34,7 +34,7 @@ const SEO = (props) => {
 			{/* <!-- Twitter --> */}
 			<meta property="twitter:card" content="summary_large_image" />
 			{/* <meta property="twitter:url" content="https://tecomatwilight.com/" /> */}
-			<meta property="twitter:title" content={`Cape Paterson BUG 🚲 | ${props.title}`} />
+			<meta property="twitter:title" content={`Cape Paterson BUG | ${props.title}`} />
 			<meta
 				property="twitter:description"
 				content="Bike user group based in Cape Paterson, Victoria, Australia"
