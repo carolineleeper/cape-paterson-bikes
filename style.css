@@ -379,7 +379,11 @@ body {
 	font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.pageTitle {
+.pageContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 100%;
 }
 
 /*********************************************/

@@ -1,8 +1,10 @@
 import { createClient } from "next-sanity";
+import SEO from "../components/SEO";
 
 const Rides = ({ rides }) => {
 	return (
 		<>
+			<SEO title="Rides" />
 			<h1 className="pageTitle">Rides</h1>
 			{rides.map((ride) => (
 				<div key={ride._id}>

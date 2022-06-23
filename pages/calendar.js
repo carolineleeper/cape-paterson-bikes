@@ -1,4 +1,5 @@
 import { createClient } from "next-sanity";
+import SEO from "../components/SEO";
 
 const formatMonth = (value) => {
 	const date = new Date(value);
@@ -42,6 +43,7 @@ const Calendar = ({ monthlySchedule }) => {
 
 	return (
 		<>
+			<SEO title="Calendar" />
 			<h1>Calendar</h1>
 			<div
 				key={lastMonth ? lastMonth._id : null}
