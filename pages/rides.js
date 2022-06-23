@@ -3,7 +3,7 @@ import { createClient } from "next-sanity";
 const Rides = ({ rides }) => {
 	return (
 		<>
-			<h1>Rides</h1>
+			<h1 className="pageTitle">Rides</h1>
 			{rides.map((ride) => (
 				<div key={ride._id}>
 					<h2>{ride.name}</h2>

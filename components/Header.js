@@ -5,7 +5,7 @@ const Header = () => {
 	return (
 		<Link href="/">
 			<a>
-				<h1>Cape Paterson Bike Group</h1>
+				<h1>Cape Paterson Bike User Group</h1>
 			</a>
 		</Link>
 	);
