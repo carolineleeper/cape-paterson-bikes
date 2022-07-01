@@ -6,7 +6,7 @@ const SEO = (props) => {
 			<meta charSet="UTF-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<meta name="robots" content="all" />
-			<link rel="icon" href="../favicon.ico" />
+			<link rel="icon" href="../favicon.png" />
 			<title>Cape Paterson BUG | {props.title}</title>
 
 			<meta name="title" content={`Cape Paterson BUG | ${props.title}`} />
